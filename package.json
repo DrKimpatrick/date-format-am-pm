@@ -1,0 +1,19 @@
+{
+  "name": "date-format-am-pm",
+  "version": "1.0.0",
+  "description": "The package returns an array of the last days",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "date-format-am-pm"
+  ],
+  "author": "drkimpatrick",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrKimpatrick/date-format-am-pm.git"
+  }
+}
