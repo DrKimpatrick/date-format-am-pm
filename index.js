@@ -1,6 +1,8 @@
-function formatAMPM(d) {
-  // Time stamp
-  const date = new Date(d || new Date());
+function formatAMPM(inputDate, monthName = false) {
+  // Check if supplied date is valid
+  var timestamp = Date.parse(inputDate);
+  // If invalid, consider current date
+  const date = isNaN(timestamp) ? new Date() : new Date(inputDate);
 
   // Getting hours and minutes
   let hours = date.getHours();
@@ -23,10 +25,19 @@ function formatAMPM(d) {
   if (dd < 10) dd = "0" + dd;
   if (mm < 10) mm = "0" + mm;
 
-  // Formated date
-  const strDate = dd + "/" + mm + "/" + yyyy;
+  // Date| "2022-04-07T12:19:26.377Z"
 
-  return `${strDate} ${strTime}`;
+  // Formated date 1 | 07/04/2022 3:19 pm
+  const strDate1 = dd + "/" + mm + "/" + yyyy;
+
+  // Formated date 2 | 07 April 2022 3:19 pm
+  const mmm = date.toLocaleString("default", { month: "long" });
+  const strDate2 = dd + " " + mmm + " " + yyyy;
+
+  // 18/06/2021 2:33 pm
+  // 07 April 2022 2:29 pm
+
+  return `${monthName ? strDate2 : strDate1} ${strTime}`;
 }
 
 module.exports = formatAMPM;
