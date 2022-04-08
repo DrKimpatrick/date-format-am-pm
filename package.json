@@ -1,7 +1,7 @@
 {
   "name": "date-format-am-pm",
-  "version": "1.0.2",
-  "description": "The package returns an array of the last days",
+  "version": "1.0.3",
+  "description": "When presented with a date/timestamp the package out puts the full date in am and pm format",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
